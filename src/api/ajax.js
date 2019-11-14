@@ -46,7 +46,7 @@ instance.interceptors.response.use(
       // 2.token过期了
       if (error.response.status === 401) {
         MessageBox.alert('token已过期,请重新登陆')
-        router.currentRoute.path !== 'login' && router.replace('/login')
+        router.currentRoute.path !== '/login' && router.replace('/login')
         // 3.请求未找到,404
      }else if(error.response.status === 404){
        MessageBox.alert('请求资源未找到')

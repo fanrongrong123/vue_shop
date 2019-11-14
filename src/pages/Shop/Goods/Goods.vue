@@ -57,23 +57,12 @@
       }
     },
     async mounted(){
-      // 测试mock接口
-      // let result = await this.$API.getShopDatas()
-      // console.log(result)
+    
       if(this.goods){
         this._initScroll()
         this._initTops()
       }
-      // this.test.num2 = 2
-      // this.$set(this.test, 'num2', 2)
-      // Vue.set(this.test, 'num2', 2)
-      // Vue中禁止个data的根对象在后期直接添加属性
-      // this.$set(this, 'num2', 2)
-      // this.num2 = 2
-      // setTimeout(() => {
-      //   // this.num = 2
-      //   this.test.num2 = 666
-      // }, 2000)
+      
     },
     computed: {
       ...mapState({
@@ -99,9 +88,7 @@
         })
         this.rightScroll = new BScroll('.rightContainer', {
           scrollY: true, // 设置纵向滑动
-          // probeType: 1, // 非实时
-          probeType: 2, // 实时
-          // probeType: 3, // 实时/惯性滑动
+          probeType: 2,    //probeType三种状态,0是初始值,1是实时,2非实时,3惯性滑动
           click: true, // 允许点击
         })
 
