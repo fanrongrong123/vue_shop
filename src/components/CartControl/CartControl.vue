@@ -4,7 +4,7 @@
       <div class="iconfont icon-jianhao" v-show="food.count" @click="updateFoodCount(false)"></div>
     </transition>
     <div class="cart-count" v-show="food.count">{{food.count}}</div>
-    <div class="iconfont icon-add" @click="updateFoodCount(true)"></div>
+    <div class="iconfont icon-add-copy" @click="updateFoodCount(true)"></div>
   </div>
 
 </template>
@@ -52,7 +52,7 @@
       font-size: 14px
       color: rgb(147, 153, 159)
       margin 0 8px
-    .icon-add
+    .icon-add-copy
       padding: 4px
       color $green
     .iconfont
